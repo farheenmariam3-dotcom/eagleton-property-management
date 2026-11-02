@@ -1,0 +1,18 @@
+# One-click deploy blueprint for https://render.com  (needs a paid instance because the database is a file on a disk)
+services:
+  - type: web
+    name: eagleton
+    runtime: node
+    plan: starter
+    buildCommand: echo "nothing to build"
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+      - key: SIGNUP_CODE
+        sync: false
+    disk:
+      name: eagleton-data
+      mountPath: /var/data
+      sizeGB: 1

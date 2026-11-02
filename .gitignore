@@ -1,0 +1,6 @@
+node_modules/
+.env
+# NEVER upload real client data to GitHub
+data/*.json
+data/*.json.*
+data/*.tmp

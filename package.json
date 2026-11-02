@@ -1,0 +1,16 @@
+{
+  "name": "eagleton-property-management",
+  "version": "1.0.0",
+  "description": "EAGLETON Property Management - site visits, plots, finalised sales, loans, registrations and payments for a real-estate office.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "import": "node scripts/import-google-export.js",
+    "upload": "node scripts/upload-to-server.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "license": "MIT"
+}
